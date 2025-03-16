@@ -19,7 +19,7 @@ function inputNumber(num: number): void {
     console.log('Number Input:', currentInput);
     updateDisplay();
 }
-
+(window as any).inputNumber = inputNumber;
 // Function to set the current operation
 function inputOperator(op: string): void {
     if (currentInput === '') {
