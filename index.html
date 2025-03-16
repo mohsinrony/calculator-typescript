@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TypeScript Calculator</h1>
+    </header>
+
+    <!-- Calculator container with accessible ARIA labels -->
+    <section id="calculator" aria-labelledby="calculator-title" role="region">
+      <div class="calculator-display">
+        <input
+          type="text"
+          id="display"
+          class="display-input"
+          disabled
+          aria-live="polite"
+          aria-label="Calculator Display"
+          placeholder="0"
+        />
+        <div
+          id="error-message"
+          class="error-message"
+          aria-live="assertive"
+        ></div>
+      </div>
+
+      <div class="button-grid" role="grid">
+        <!-- Clear button -->
+        <button onclick="clearDisplay()" class="btn-clear" aria-label="Clear">
+          C
+        </button>
+
+        <!-- Number buttons -->
+        <button
+          onclick="inputNumber(7)"
+          class="btn-number"
+          aria-label="Number 7"
+        >
+          7
+        </button>
+        <button
+          onclick="inputNumber(8)"
+          class="btn-number"
+          aria-label="Number 8"
+        >
+          8
+        </button>
+        <button
+          onclick="inputNumber(9)"
+          class="btn-number"
+          aria-label="Number 9"
+        >
+          9
+        </button>
+        <button
+          onclick="inputOperator('/')"
+          class="btn-operator"
+          aria-label="Divide"
+        >
+          /
+        </button>
+
+        <button
+          onclick="inputNumber(4)"
+          class="btn-number"
+          aria-label="Number 4"
+        >
+          4
+        </button>
+        <button
+          onclick="inputNumber(5)"
+          class="btn-number"
+          aria-label="Number 5"
+        >
+          5
+        </button>
+        <button
+          onclick="inputNumber(6)"
+          class="btn-number"
+          aria-label="Number 6"
+        >
+          6
+        </button>
+        <button
+          onclick="inputOperator('*')"
+          class="btn-operator"
+          aria-label="Multiply"
+        >
+          *
+        </button>
+
+        <button
+          onclick="inputNumber(1)"
+          class="btn-number"
+          aria-label="Number 1"
+        >
+          1
+        </button>
+        <button
+          onclick="inputNumber(2)"
+          class="btn-number"
+          aria-label="Number 2"
+        >
+          2
+        </button>
+        <button
+          onclick="inputNumber(3)"
+          class="btn-number"
+          aria-label="Number 3"
+        >
+          3
+        </button>
+        <button
+          onclick="inputOperator('-')"
+          class="btn-operator"
+          aria-label="Subtract"
+        >
+          -
+        </button>
+
+        <!-- Zero and Equals buttons -->
+        <button
+          onclick="inputNumber(0)"
+          class="btn-number"
+          aria-label="Number 0"
+        >
+          0
+        </button>
+        <button
+          onclick="calculateResult()"
+          class="btn-equals"
+          aria-label="Calculate Result"
+        >
+          =
+        </button>
+        <button
+          onclick="inputOperator('+')"
+          class="btn-operator"
+          aria-label="Add"
+        >
+          +
+        </button>
+      </div>
+    </section>
+
+    <script src="./src/calculator.ts"></script>
+  </body>
+</html>
