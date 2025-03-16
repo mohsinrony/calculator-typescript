@@ -61,15 +61,3 @@ npm run build
 ```
 
 This will create a dist folder with the production-ready files.
-
-# File Structure
-
-calculator-typescript/
-├── index.html # Main HTML file
-├── package.json # Project configuration and dependencies
-├── package-lock.json # Lock file for npm dependencies
-├── public/ # Public assets (e.g., images, icons)
-├── src/
-│ ├── calculator.ts # TypeScript file for the app's logic
-│ └── style.css # CSS file for styling the app
-└── tsconfig.json # TypeScript configuration
