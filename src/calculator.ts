@@ -20,6 +20,10 @@ function inputNumber(num: number): void {
     updateDisplay();
 }
 (window as any).inputNumber = inputNumber;
+(window as any).clearDisplay = clearDisplay;
+(window as any).inputOperator = inputOperator;
+(window as any).calculateResult = calculateResult;
+
 // Function to set the current operation
 function inputOperator(op: string): void {
     if (currentInput === '') {
